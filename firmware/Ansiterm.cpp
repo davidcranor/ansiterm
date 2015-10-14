@@ -166,7 +166,7 @@ void Ansiterm::inverseOff()
 
 void Ansiterm::reset()
 {
- setAttribute(RESET);
+ setAttribute(RESET_SIG);
 }
 
 

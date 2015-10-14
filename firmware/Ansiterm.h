@@ -51,7 +51,7 @@ The latest version of this software is available at http://code.google.com/p/qrp
 #define STRIKETHROUGH_OFF 29
 #define INVERSE_ON 7
 #define INVERSE_OFF 27
-#define RESET 1
+#define RESET_SIG 1
 #define DEFAULT_FOREGROUND 39
 #define DEFAULT_BACKGROUND 49
 
