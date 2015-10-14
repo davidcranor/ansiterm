@@ -31,6 +31,8 @@ The latest version of this software is available at http://code.google.com/p/qrp
 #ifndef Ansiterm_h
 #define Ansiterm_h
 
+#include "application.h"
+
 #define ESCAPE 0x1B
 #define BRACE '['
 #define BLACK 0
