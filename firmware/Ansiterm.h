@@ -89,6 +89,8 @@ public:
        void lineDrawingOn();
        void lineDrawingOff();
        void setFont(int g);
+       void drawFrame(int x1, int y1, int x2, int y2);
+
 private:
      void preamble();
      void preambleAndNumberAndValue(int x, char v);

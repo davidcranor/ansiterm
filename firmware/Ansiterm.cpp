@@ -195,6 +195,42 @@ void Ansiterm::defaultForeground()
  setAttribute(DEFAULT_FOREGROUND);
 }
 
+void Ansiterm::drawFrame(int x1, int y1, int x2, int y2)
+{
+  ansi.lineDrawingOn();
+
+  xy(x1, y1);
+  Serial.print('l');
+
+  xy(x2, y1);
+  Serial.print('k');
+
+  xy(x1, y2);
+  Serial.print('m');
+
+  xy(x2, y2);
+  Serial.print('j');
+
+  for(int x = x1+1; x < x2; x++)
+  {
+    xy(x, y1);
+    Serial.print('o');
+
+    xy(x, y2);
+    Serial.print('o');
+  }
+
+  for(int y = y1+1; y < y2; y++)
+  {
+      xy(x1, y);
+      Serial.print('x');
+
+      xy(x2, y);
+      Serial.print('x');
+  }
+
+  ansi.lineDrawingOff();
+}
 
 void Ansiterm::fill(int x1, int y1, int x2, int y2)
 {
