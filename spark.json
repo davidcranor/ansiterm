@@ -1,6 +1,6 @@
 {
     "name": "Ansiterm",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "David Cranor <david.cranor@gmail.com",
     "license": "GPL 2.1",
     "description": "Ported from the original Arduino code written by VE9QRP (Bruce Robinson)"
