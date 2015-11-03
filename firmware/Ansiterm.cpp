@@ -51,6 +51,26 @@ void Ansiterm::xy(int x, int y)
  Serial.write('H');
 }
 
+void setFont(int g)
+{
+  switch(g)
+  {
+    case 0:
+    Serial.write(ESCAPE);
+    Serial.write('(');
+    break;
+
+    case 1:
+    Serial.write(ESCAPE);
+    Serial.write(')');
+    break;
+
+    default:
+    break;
+  }
+
+}
+
 
 void Ansiterm::up(int x)
 {
@@ -87,7 +107,7 @@ void Ansiterm::eraseLine()
 void Ansiterm::eraseScreen()
 {
  preamble();
- Serial.write('1');
+ Serial.write('2');
  Serial.write('J');
 }
 
