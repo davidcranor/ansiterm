@@ -51,7 +51,7 @@ void Ansiterm::xy(int x, int y)
  Serial.write('H');
 }
 
-void setFont(int g)
+void Ansiterm::setFont(int g)
 {
   switch(g)
   {
