@@ -197,7 +197,7 @@ void Ansiterm::defaultForeground()
 
 void Ansiterm::drawFrame(int x1, int y1, int x2, int y2)
 {
-  ansi.lineDrawingOn();
+  lineDrawingOn();
 
   xy(x1, y1);
   Serial.print('l');
@@ -229,7 +229,7 @@ void Ansiterm::drawFrame(int x1, int y1, int x2, int y2)
       Serial.print('x');
   }
 
-  ansi.lineDrawingOff();
+  lineDrawingOff();
 }
 
 void Ansiterm::fill(int x1, int y1, int x2, int y2)
