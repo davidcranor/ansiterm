@@ -57,12 +57,14 @@ void Ansiterm::setFont(int g)
   {
     case 0:
     Serial.write(ESCAPE);
-    Serial.write('(B');
+    Serial.write('(');
+    Serial.write('B');
     break;
 
     case 1:
     Serial.write(ESCAPE);
-    Serial.write('(0');
+    Serial.write('(');
+    Serial.write('0');
     break;
 
     default:
