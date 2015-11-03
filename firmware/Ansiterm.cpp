@@ -51,26 +51,18 @@ void Ansiterm::xy(int x, int y)
  Serial.write('H');
 }
 
-void Ansiterm::setFont(int g)
+void Ansiterm::lineDrawingOn()
 {
-  switch(g)
-  {
-    case 0:
-    Serial.write(ESCAPE);
-    Serial.write('(');
-    Serial.write('B');
-    break;
-
-    case 1:
     Serial.write(ESCAPE);
     Serial.write('(');
     Serial.write('0');
-    break;
+}
 
-    default:
-    break;
-  }
-
+void Ansiterm::lineDrawingOff()
+{
+  Serial.write(ESCAPE);
+  Serial.write('(');
+  Serial.write('B');
 }
 
 

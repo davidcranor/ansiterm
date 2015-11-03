@@ -86,6 +86,8 @@ public:
        void defaultBackground();
        void defaultForeground();
        void fill(int x1, int y1, int x2, int y2);
+       void lineDrawingOn();
+       void lineDrawingOff();
        void setFont(int g);
 private:
      void preamble();
